@@ -1,0 +1,220 @@
+.contenedor {
+  background-image: url('../img/fotohome.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: rgb(4, 4, 4);
+  text-align: center;
+  padding: 20px;
+  font-family: monospace;
+  font-style:inherit;
+  position: relative; /* Añade esta línea para asegurarte de que el dropdown esté posicionado correctamente */
+  font-size: xx-large;
+}
+
+/* Elimina il blocco di stili per il quadrato giallo */
+.dropdown::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/LOGO.png');
+}
+
+.dropdown:hover::before {
+  /* Aggiungi il logo come background-image solo quando l'elemento è in stato di hover */
+  background-image: url('../img/LOGO.png');
+}
+
+/* Estilos para la imagen */
+.contenedor img {
+  background-image: url('../img/LOGO.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+// Developed by http://grohit.com/
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  font-family: Hack, monospace;
+}
+
+div {
+  color: #727272;
+  text-align: center;
+}
+
+p {
+  margin: 16px;
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+
+  &::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+nav {
+  background-image: url('../img/fotohome.jpeg'); /* Aggiungi lo sfondo alla barra di navigazione */
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16px; /* Regola la spaziatura interna */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0; /* Rimuovi il padding dal menuItems */
+}
+
+.menuItems li {
+  margin-right: 20px;
+}
+
+.menuItems li a {
+  text-decoration: none;
+  color: #faf7f7;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.sub-menu {
+  list-style: none; /* Rimuovi la numerazione dal sottomenu */
+  padding: 0; /* Rimuovi il padding */
+}
+
+.sub-menu li {
+  margin: 0; /* Rimuovi il margine tra le voci del sottomenu */
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #faf7f7;
+  font-size: 16px; /* Riduci la dimensione del testo del sottomenu se necessario */
+  font-weight: 400;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.menuItems li:hover .sub-menu {
+  display: block;
+}
+.logo {
+  width: 200px;
+  height: 100px;
+  background: url('../img/icono.png') no-repeat center center / cover; /* O simplemente quita "/ cover" */
+
+  position: fixed; /* Puedes cambiar a 'absolute' si prefieres que sea relativo al flujo normal del documento */
+  bottom: 0;
+  left: 0;
+}
