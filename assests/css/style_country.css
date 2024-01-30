@@ -46,25 +46,28 @@ footer {
 }
 
 .mosaico {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin-top: 40px; /* Ajusta el margen superior según sea necesario */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 40px; /* Ajusta el margen superior según sea necesario */
 }
 
+
+
 .imagen {
-    width: 150px;
-    height: 150px;
+    width: 125px;
+    height: 125px;
     overflow: hidden;
     cursor: pointer;
 }
 
 .imagen img {
-    width: 100%;
-    height: 100%;
+    width: 125%;
+    height: 125%;
     object-fit: cover;
+    height: auto; /* Mantiene la proporción de aspecto */
 }
 
 /* Agrega estilos para el modal */
@@ -88,8 +91,8 @@ footer {
 }
 
 .modal img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 }
 
