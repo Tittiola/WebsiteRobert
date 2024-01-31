@@ -9,81 +9,112 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <title>Robert John Neri</title>
     <link rel="stylesheet" href="./assests/css/style_country.css">
+      
+  
+</head>
 
 <body>
-    <nav>
-        <div class="dropdown">
-            <button class="dropbtn">Portfolio</button>
-            <div class="dropdown-content">
-                <a href="country.html">Country</a>
-                <a href="mountain.html">Mountain</a>
-                <a href="portraits.html">Portraits</a>
-                <a href="sea.html">Sea</a>
-                <a href="street.html">Street</a>
+    <section>
+        <nav>
+            <ul class="menuItems">
+                <li><a href='home.html' data-item='Home'>Home</a></li>
+                <li><a href='#' data-item='About'>About</a></li>
+                <li><a href='progetti.html' data-item='Projects'>Projects</a>
+                    <ol class="sub-menu">
+                        <li class="menu-item"><a href="country.html">Country</a></li>
+                        <li class="menu-item"><a href="mountain.html">Mountain</a></li>
+                        <li class="menu-item"><a href="portraits.html">Portraits</a></li>
+                        <li class="menu-item"><a href="sea.html">Sea</a></li>
+                        <li class="menu-item"><a href="street.html">Streets</a></li>
+                    </ol>
+                </li>
+                <li><a href='#' data-item='Blog'>Blog</a></li>
+                <li><a href='#' data-item='Contact'>Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <div class="contenedor">
+        <header>
+            <h1>Country</h1>
+        </header>
+
+        <div class="mosaico" id="mosaico">
+            <!-- Imágenes se agregarán dinámicamente aquí -->
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <div class="modal-content" id="modalContent">
+                <!-- Contenido de la imagen del modal -->
             </div>
         </div>
-        <a href="progetti.html">Progetti</a> |
-    </nav>
-    <div class="contenedor">
-    <header>
-        <h1>Country</h1>
-    </header>
-    <img src="./assests/img/MOUNTAIN/img1.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img2.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img3.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img4.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img5.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img6.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img7.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img8.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img9.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img10.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img11.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img12.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img13.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img14.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img15.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img16.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img17.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img18.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img19.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img20.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img21.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img22.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img23.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img24.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img25.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img26.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img27.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img28.JPG" alt="Descripción de la tercera imagen" loading="lazy">
-    <img src="./assests/img/MOUNTAIN/img29.JPG" alt="Descripción de la tercera imagen" loading="lazy">
 
+        <script>
+            // Lista de rutas de imágenes
+            var imagenes = [
+                './assests/img/MOUNTAIN/img1.jpg',
+                './assests/img/MOUNTAIN/img2.jpg',
+                './assests/img/MOUNTAIN/img3.jpg',
+                './assests/img/MOUNTAIN/img4.jpg',
+                './assests/img/MOUNTAIN/img5.jpg',
+                './assests/img/MOUNTAIN/img6.jpg',
+                './assests/img/MOUNTAIN/img7.jpg',
+                './assests/img/MOUNTAIN/img8.jpg',
+                './assests/img/MOUNTAIN/img9.jpg',
+                './assests/img/MOUNTAIN/img10.jpg',
+                './assests/img/MOUNTAIN/img11.jpg',
+                './assests/img/MOUNTAIN/img12.jpg',
+                './assests/img/MOUNTAIN/img13.jpg',
+                './assests/img/MOUNTAIN/img14.jpg',
+                './assests/img/MOUNTAIN/img15.jpg',
+                './assests/img/MOUNTAIN/img16.jpg',
+                './assests/img/MOUNTAIN/img17.jpg',
+                './assests/img/MOUNTAIN/img18.jpg',
+                './assests/img/MOUNTAIN/img19.jpg',
+                './assests/img/MOUNTAIN/img20.jpg',
+                './assests/img/MOUNTAIN/img21.jpg',
+                './assests/img/MOUNTAIN/img22.jpg',
+                './assests/img/MOUNTAIN/img23.jpg',
+                './assests/img/MOUNTAIN/img24.jpg',
+                './assests/img/MOUNTAIN/img25.jpg',
+                './assests/img/MOUNTAIN/img26.jpg',
+                './assests/img/MOUNTAIN/img27.jpg',
+                './assests/img/MOUNTAIN/img28.jpg',
+                './assests/img/MOUNTAIN/img29.jpg',
+        
+            ];
 
+            // Referencia al contenedor del mosaico
+            var mosaico = document.getElementById('mosaico');
 
+            // Generar el mosaico dinámicamente
+            for (var i = 0; i < imagenes.length; i++) {
+                var imagenDiv = document.createElement('div');
+                imagenDiv.className = 'imagen';
+                imagenDiv.innerHTML = '<img src="' + imagenes[i] + '" alt="Imagen ' + (i + 1) + '" onclick="abrirModal(\'' + imagenes[i] + '\')">';
+                mosaico.appendChild(imagenDiv);
+            }
+
+            // Función para abrir el modal con la imagen
+            function abrirModal(rutaImagen) {
+                var modal = document.getElementById('myModal');
+                var modalContent = document.getElementById('modalContent');
+                modalContent.innerHTML = '<img src="' + rutaImagen + '" alt="Imagen" style="width:100%;">';
+                modal.style.display = 'block';
+            }
+
+            // Función para cerrar el modal
+            function cerrarModal() {
+                var modal = document.getElementById('myModal');
+                modal.style.display = 'none';
+            }
+        </script>
+    </div>
+
+    <footer>
+        Robert John Neri &copy;| PHOTOGRAPHY
        
-</div>
-  
-    <script>
-        /* Cuando se carga el documento, asigna eventos */
-        document.addEventListener('DOMContentLoaded', function() {
-            const dropdown = document.querySelector('.dropdown');
-            dropdown.addEventListener('mouseover', function() {
-                this.querySelector('.dropdown-content').style.display = 'block';
-            });
-            dropdown.addEventListener('mouseout', function() {
-                this.querySelector('.dropdown-content').style.display = 'none';
-            });
-        });
-
-    
-    </script>
-    <!-- Contenedor donde se insertarán las imágenes -->
-<div id="contenedor-imagenes"></div>
-
-<footer>
-    &copy; Viola Maccioni | todos los Derechos Reservados 2023
-    <a href="index.html">Contatta</a> |
-    <a href="experiencia.html">Bio</a> |
-</footer>
+   </footer>
 </body>
+
 </html>
