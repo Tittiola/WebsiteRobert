@@ -201,3 +201,7 @@ nav {
   .menuItems li:hover .sub-menu {
     display: block;
   }
+
+  @media only screen and (max-width: 600px) {
+    /* Estilos para pantallas más pequeñas */
+}

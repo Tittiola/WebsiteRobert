@@ -2,6 +2,7 @@
   background-image: url('../img/fotohome.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   color: rgb(4, 4, 4);
   text-align: center;
@@ -145,6 +146,7 @@ nav {
   transition: all 0.5s ease-in-out;
   position: relative;
   text-transform: uppercase;
+  margin-right: -2px;
 
   &::before {
     content: attr(data-item);
@@ -214,7 +216,88 @@ nav {
   height: 100px;
   background: url('../img/icono.png') no-repeat center center / cover; /* O simplemente quita "/ cover" */
 
-  position: fixed; /* Puedes cambiar a 'absolute' si prefieres que sea relativo al flujo normal del documento */
-  bottom: 0;
-  left: 0;
+  position: absolute;
+  bottom: 150px; /* Ajusta la distancia desde la parte inferior según sea necesario */
+  left: 5px; /* Ajusta la distancia desde la izquierda según sea necesario */
 }
+
+footer {
+  background-color: #333; /* Cambia esto según tu diseño */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 600px) and (max-device-width: 600px) {
+  .contenedor {
+    background-size: cover; /* o ajusta según sea necesario */
+  }
+}
+
+@media only screen and (max-width: 360px) and (max-device-width: 740px) {
+  nav {
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    justify-content: space-around; /* Ajusta la distribución de los elementos */
+  }
+
+  .menuItems {
+    flex-direction: row
+    align-items: center; /* Centra los elementos del menú verticalmente */
+  }
+
+  .menuItems li {
+    margin-right: 10px; /* Elimina el margen derecho en dispositivos pequeños */
+    margin-bottom: 10px; /* Añade un margen inferior entre los elementos del menú */
+    margin-left: 10PX;
+    
+  }
+
+  .menuItems li a {
+    padding: 10px; /* Ajusta el relleno dentro de cada enlace según sea necesario */
+    font-size: 13px;
+  }
+
+  @media only screen and (max-width: 280px) and (max-device-width: 653px) {
+    nav {
+      padding: 10px; /* Ajusta el relleno según sea necesario */
+      height: auto; /* Permite que la altura se ajuste automáticamente */
+      justify-content: space-around; /* Ajusta la distribución de los elementos */
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    h2 {
+      font-size: 30px;
+    }
+  
+    .menuItems {
+      flex-direction: row; /* Agrega la coma que falta aquí */
+      align-items: center; /* Centra los elementos del menú verticalmente */
+    }
+  
+    .menuItems li {
+      margin-right: 10px; /* Ajusta el margen derecho en dispositivos pequeños con la unidad adecuada */
+      margin-bottom: 10px; /* Añade un margen inferior entre los elementos del menú */
+      margin-left: 3px;
+    }
+  
+    .menuItems li a {
+      padding: 10px; /* Ajusta el relleno dentro de cada enlace según sea necesario */
+      font-size: 10px; /* Reduce el tamaño de la fuente */
+    }
+    .logo {
+      width: 100px;
+      height: 50px;
+      background: url('../img/icono.png') no-repeat center center / cover; /* O simplemente quita "/ cover" */
+    
+      position: absolute;
+      bottom: 100px; /* Ajusta la distancia desde la parte inferior según sea necesario */
+      left: 20px; /* Ajusta la distancia desde la izquierda según sea necesario */
+    }
+  }

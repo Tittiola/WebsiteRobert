@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/SEA/imag8.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+nav {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none; /* Corrected text-decoration property */
+}
+
+
+.menuItems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0; /* Rimuovi il padding dal menuItems */
+}
+
+.menuItems li {
+  margin-right: 20px;
+}
+
+.menuItems li a {
+  text-decoration: none;
+  color: #030303;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #030303;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.sub-menu {
+  list-style: none; /* Rimuovi la numerazione dal sottomenu */
+  padding: 0; /* Rimuovi il padding */
+}
+
+.sub-menu li {
+  margin: 0; /* Rimuovi il margine tra le voci del sottomenu */
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #060606;
+  font-size: 16px; /* Riduci la dimensione del testo del sottomenu se necessario */
+  font-weight: 400;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #020202;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.menuItems li:hover .sub-menu {
+  display: block;
+}
+
+form {
+  padding: 50px 55px; /* Corrected the padding property */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+h2 {
+  color: #283629;
+  font-size: 35px;
+}
+
+label {
+  color: #974b83;
+  font-size: 18px;
+  font-weight: 1000;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 15px; /* Adjusted the margin-bottom value */
+  background-color: #e1ede3;
+  border: 2px solid #b3adb2;
+  color: #283629;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #3b3f4b;
+}
+
+.form-txt {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.form-txt a {
+  color: #76b28e;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 18px;
+  color: #0a0a0a;
+  border: 0;
+  border-radius: 25px;
+  background-color: #974b83;
+  box-shadow: 0 0 20px rgba(100, 101, 100, 0.4);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3f413f;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding: 30px;
+  }
+
+  form {
+    padding: 50px 30px; /* Corrected the padding property */
+    width: 100%;
+  }
+
+  input {
+    padding: 15px 10px;
+  }
+}
