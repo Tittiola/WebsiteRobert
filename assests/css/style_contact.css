@@ -2,12 +2,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
   background-image: url(../img/SEA/imag8.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -17,17 +18,16 @@ nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  text-decoration: none; /* Corrected text-decoration property */
+  text-decoration: none;
+  margin: 0;
 }
-
 
 .menuItems {
   list-style: none;
   display: flex;
   margin: 0;
-  padding: 0; /* Rimuovi il padding dal menuItems */
+  padding: 0;
 }
-
 .menuItems li {
   margin-right: 20px;
 }
@@ -105,13 +105,25 @@ nav {
 .menuItems li:hover .sub-menu {
   display: block;
 }
+footer {
+  background-color: #333; /* Cambia esto según tu diseño */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
 
 form {
-  padding: 50px 55px; /* Corrected the padding property */
+  padding: 20px 45px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   text-align: center;
-  width: 340px;
+  width: 900px;
+  height: 550px;
+  margin: 20px auto 0; /* Ajuste del margen superior para dejar espacio para la barra de navegación */
+  align-items: center;
 }
 
 .input-group {
@@ -122,25 +134,30 @@ form {
 
 h2 {
   color: #283629;
-  font-size: 35px;
+  font-size: 30px; /* Adjusted the font size */
+  text-align: left;
 }
 
 label {
-  color: #974b83;
-  font-size: 18px;
+  color: #f4f3f7;
+  font-size: 16px; /* Adjusted the font size */
   font-weight: 1000;
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Adjusted the margin-bottom */
 }
 
 input,
 textarea {
-  padding: 17px 25px;
-  border-radius: 25px;
-  margin-bottom: 15px; /* Adjusted the margin-bottom value */
+  padding: 15px 25px; /* Adjusted the padding */
+  border-radius: 20px; /* Slightly reduced the border-radius */
+  margin-bottom: 10px; /* Adjusted the margin-bottom */
   background-color: #e1ede3;
   border: 2px solid #b3adb2;
   color: #283629;
   outline: none;
+}
+
+.input-group textarea {
+  min-height: 100px; /* Set a minimum height for textarea */
 }
 
 input::placeholder,
@@ -149,7 +166,7 @@ textarea::placeholder {
 }
 
 .form-txt {
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Adjusted the margin-bottom */
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -163,17 +180,19 @@ textarea::placeholder {
 }
 
 .btn {
-  font-size: 18px;
-  color: #0a0a0a;
-  border: 0;
-  border-radius: 25px;
-  background-color: #974b83;
+  font-size: 16px; /* Adjusted the font size */
+  border-radius: 20px;
+  background-color: #868583;
   box-shadow: 0 0 20px rgba(100, 101, 100, 0.4);
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #3f413f;
+  background-color: #7c5a9c;
+  color: #fff;
+  box-shadow: 0 0 25px rgba(100, 101, 100, 0.6);
+  transform: scale(1.03);
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 @media (max-width: 991px) {

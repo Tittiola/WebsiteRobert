@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-image: url(../img/PORTRAITS/image16.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-size: contain;
+}
+
+nav {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  margin: 100px 0;
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start; /* Alinea los elementos al principio (izquierda) */
+}
+
+.menuItems li {
+  margin-right: 20px;
+}
+
+.menuItems li a {
+  text-decoration: none;
+  color: #357a93;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  position:relative;
+  text-transform: uppercase;
+  padding: 50px;
+  text-align: left;
+
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #030303;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+    color: #060606;
+  }
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sub-menu li {
+  margin: 0;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #060606;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: monospace;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #020202;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:hover {
+    font-weight: bold;
+  }
+}
+
+.menuItems li:hover .sub-menu {
+  display: block;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2; /* Asegura que el footer esté encima de la imagen de fondo */
+}
+
+p {
+  color: #0f0e0e;
+  font-size: 13px;
+  margin-top: 210px; /* Ajusta el margen superior según sea necesario */
+  text-align: center;
+  margin-left: 80px;
+  margin-right: 20px;
+  padding: 20px;
+  line-height: 1.5;
+  text-shadow:azure;
+}

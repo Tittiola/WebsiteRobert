@@ -174,18 +174,18 @@ nav {
 
 .sub-menu {
   list-style: none; /* Rimuovi la numerazione dal sottomenu */
-  padding: 0; /* Rimuovi il padding */
+  padding: 1; /* Rimuovi il padding */
 }
 
 .sub-menu li {
-  margin: 0; /* Rimuovi il margine tra le voci del sottomenu */
+  margin: 1; /* Rimuovi il margine tra le voci del sottomenu */
 }
 
 .sub-menu a {
   text-decoration: none;
   color: #faf7f7;
-  font-size: 16px; /* Riduci la dimensione del testo del sottomenu se necessario */
-  font-weight: 400;
+  font-size: 10px; /* Riduci la dimensione del testo del sottomenu se necessario */
+  font-weight: 200;
   font-family: monospace;
   transition: all 0.5s ease-in-out;
   text-transform: uppercase;
@@ -211,15 +211,7 @@ nav {
 .menuItems li:hover .sub-menu {
   display: block;
 }
-.logo {
-  width: 200px;
-  height: 100px;
-  background: url('../img/icono.png') no-repeat center center / cover; /* O simplemente quita "/ cover" */
 
-  position: absolute;
-  bottom: 150px; /* Ajusta la distancia desde la parte inferior según sea necesario */
-  left: 5px; /* Ajusta la distancia desde la izquierda según sea necesario */
-}
 
 footer {
   background-color: #333; /* Cambia esto según tu diseño */

@@ -51,23 +51,21 @@ footer {
   gap: 10px;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
-  margin-top: 40px; /* Ajusta el margen superior según sea necesario */
+  margin-top: 5px; /* Ajusta el margen superior según sea necesario */
 }
 
-
-
 .imagen {
-    width: 125px;
-    height: 125px;
-    overflow: hidden;
-    cursor: pointer;
+  width: 200px; /* Ajusta el ancho de las imágenes según sea necesario */
+  height: 200px; /* Ajusta la altura de las imágenes según sea necesario */
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .imagen img {
-    width: 125%;
-    height: 125%;
-    object-fit: cover;
-    height: auto; /* Mantiene la proporción de aspecto */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  height: auto; /* Mantiene la proporción de aspecto */
 }
 
 /* Agrega estilos para el modal */
@@ -131,7 +129,7 @@ nav {
   .menuItems li a {
     text-decoration: none;
     color: #030303;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 400;
     font-family: monospace;
     transition: all 0.5s ease-in-out;
@@ -172,34 +170,26 @@ nav {
   }
   
   .sub-menu a {
-    text-decoration: none;
-    color: #060606;
-    font-size: 16px; /* Riduci la dimensione del testo del sottomenu se necessario */
-    font-weight: 400;
-    font-family: monospace;
-    transition: all 0.5s ease-in-out;
-    text-transform: uppercase;
+    font-size: 14px; /* Ajusta este valor según tus preferencias */
+    padding: 8px 12px; /* Ajusta el espaciado interno */
+  }
   
-    &::before {
-      content: attr(data-item);
-      transition: 0.5s;
-      color: #020202;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 0;
-      overflow: hidden;
-    }
+  .menuItems li {
+    margin-right: 10px; /* Ajusta el espaciado entre elementos del menú */
+  }
   
-    &:hover {
-      font-weight: bold;
-    }
+  .menuItems li a {
+    font-size: 20px; /* Ajusta el tamaño del texto del menú principal */
   }
   
   .menuItems li:hover .sub-menu {
     display: block;
+    position: static; /* Cambia la posición para que aparezca debajo del elemento padre */
+  }
+  
+  .dropdown-content {
+    position: static; /* Cambia la posición para que aparezca debajo del elemento padre */
+    width: 100%; /* Ocupa el ancho completo */
   }
 
   @media only screen and (max-width: 600px) {
