@@ -106,13 +106,16 @@ nav {
   display: block;
 }
 footer {
-  background-color: #333; /* Cambia esto según tu diseño */
+  background-color: #333;
   color: white;
   text-align: center;
+  font-size: 11px;
   padding: 10px;
   position: fixed;
-  width: 100%;
+  width: 100%; /* Cambiado a 100% para ocupar todo el ancho de la página */
+  height: 10px; /* Puedes ajustar la altura según tus preferencias */
   bottom: 0;
+  z-index: 2;
 }
 
 form {
@@ -120,10 +123,17 @@ form {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   text-align: center;
-  width: 900px;
-  height: 550px;
-  margin: 20px auto 0; /* Ajuste del margen superior para dejar espacio para la barra de navegación */
+  width: 80%;
+  max-width: 900px;
+  height: auto; /* Cambiado a auto para que se ajuste al contenido */
+  margin: 20px auto 90px;
   align-items: center;
+  box-sizing: border-box; /* Incluye padding y borde en el ancho y alto */
+}
+
+/* Asegura que el contenido dentro del formulario sea responsive */
+form * {
+  box-sizing: border-box;
 }
 
 .input-group {
@@ -194,18 +204,397 @@ textarea::placeholder {
   transform: scale(1.03);
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
+@media only screen and (max-width: 435px) {
+  nav {
+    margin: 5% 0;
+  }
 
-@media (max-width: 991px) {
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  
+  body p {
+    font-size: 14px;
+    text-align:justify;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+    }
+
+
+  
   body {
-    padding: 30px;
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  
+  body p {
+    font-size: 12.5px;
+    text-align:left;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+    }
+
+
+  
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
   }
 
   form {
-    padding: 50px 30px; /* Corrected the padding property */
-    width: 100%;
+    width: 100%; /* Occupa tutta la larghezza della finestra del browser */
+    height: auto; /* Adatta l'altezza dinamicamente al contenuto */
+    margin: 2px auto 9px;
+    align-items: center;
   }
 
-  input {
-    padding: 15px 10px;
+  input,
+  textarea {
+    padding: 10px; /* Modifica il padding per adattarsi meglio ai dispositivi più piccoli */
+    width: 100%; /* Occupa tutta la larghezza disponibile */
   }
 }
+  /* Asegura que el contenido dentro del formulario sea responsive */
+  form * {
+    box-sizing:content-box;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  h2 {
+    color: #283629;
+    font-size: 30px; /* Adjusted the font size */
+    text-align: left;
+  }
+  
+  label {
+    color: #f4f3f7;
+    font-size: 16px; /* Adjusted the font size */
+    font-weight: 1000;
+    margin-bottom: 10px; /* Adjusted the margin-bottom */
+  }
+  
+  input,
+  textarea {
+    padding: 15px 25px; /* Adjusted the padding */
+    border-radius: 20px; /* Slightly reduced the border-radius */
+    margin-bottom: 10px; /* Adjusted the margin-bottom */
+    background-color: #e1ede3;
+    border: 2px solid #b3adb2;
+    color: #283629;
+    outline: none;
+  }
+  
+  .input-group textarea {
+    min-height: 100px; /* Set a minimum height for textarea */
+  }
+  
+  input::placeholder,
+  textarea::placeholder {
+    color: #3b3f4b;
+  }
+  
+  .form-txt {
+    margin-bottom: 20px; /* Adjusted the margin-bottom */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+  
+  .form-txt a {
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+  
+ 
+
+
+
+@media only screen and (max-width: 400px) {
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  
+  body p {
+    font-size: 10px;
+    text-align:left;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+    }
+
+
+  
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+  
+  body p {
+    font-size: 11px;
+    text-align:justify;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+    }
+
+
+  
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  nav {
+    margin: 3% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  
+  body p {
+    font-size: 8.5px;
+    text-align:justify;
+    margin-left: 5px;
+    margin-top: 2px;
+    margin-right: 5px;
+    }
+
+
+  
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  body {
+    background-size: cover; /* Ajusta según tus necesidades */
+  }
+
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  body p {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 100px;
+    padding: 10px;
+    line-height: 2;
+    text-shadow: azure;
+    margin-top: 80px;
+    margin-bottom: 2px;
+  }
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+/* iPad (Landscape) */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  body {
+    background-size: cover; /* Ajusta según tus necesidades */
+  }
+
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
+  }
+
+  .menuItems li a {
+    font-size: 1.5em;
+    padding: 0.5em;
+  }
+
+  body p {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 100px;
+    padding: 10px;
+    line-height: 2;
+    text-shadow: azure;
+    margin-top: 80px;
+    margin-bottom: 2px;
+  }
+  body {
+    background-position: center;
+    background-size: contain;
+    background-position: bottom;
+  
+  }
+}
+
+
+
+

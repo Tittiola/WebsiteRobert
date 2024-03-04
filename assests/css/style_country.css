@@ -12,14 +12,18 @@
 
 /* Establece un estilo básico para el footer */
 footer {
-    background-color: #333; /* Cambia esto según tu diseño */
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  padding: 10px;
+  position: fixed;
+  width: 100%; /* Cambiado a 100% para ocupar todo el ancho de la página */
+  height: 10px; /* Puedes ajustar la altura según tus preferencias */
+  bottom: 0;
+  z-index: 2;
 }
+
 
 .dropdown {
     position: relative;

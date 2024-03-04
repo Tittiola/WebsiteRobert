@@ -214,14 +214,18 @@ nav {
 
 
 footer {
-  background-color: #333; /* Cambia esto según tu diseño */
+  background-color: #333;
   color: white;
   text-align: center;
+  font-size: 11px;
   padding: 10px;
   position: fixed;
-  width: 100%;
+  width: 100%; /* Cambiado a 100% para ocupar todo el ancho de la página */
+  height: 10px; /* Puedes ajustar la altura según tus preferencias */
   bottom: 0;
+  z-index: 2;
 }
+
 
 @media only screen and (max-width: 600px) and (max-device-width: 600px) {
   .contenedor {
@@ -253,7 +257,7 @@ footer {
     font-size: 13px;
   }
 
-  @media only screen and (max-width: 280px) and (max-device-width: 653px) {
+   @media only screen and (max-width: 280px) and (max-device-width: 653px){
     nav {
       padding: 10px; /* Ajusta el relleno según sea necesario */
       height: auto; /* Permite que la altura se ajuste automáticamente */
@@ -283,13 +287,5 @@ footer {
       padding: 10px; /* Ajusta el relleno dentro de cada enlace según sea necesario */
       font-size: 10px; /* Reduce el tamaño de la fuente */
     }
-    .logo {
-      width: 100px;
-      height: 50px;
-      background: url('../img/icono.png') no-repeat center center / cover; /* O simplemente quita "/ cover" */
-    
-      position: absolute;
-      bottom: 100px; /* Ajusta la distancia desde la parte inferior según sea necesario */
-      left: 20px; /* Ajusta la distancia desde la izquierda según sea necesario */
-    }
+
   }
