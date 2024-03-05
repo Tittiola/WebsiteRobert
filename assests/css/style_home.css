@@ -1,13 +1,20 @@
 .contenedor {
-  background: url('../img/fotohome.jpeg') no-repeat center/cover fixed;
+  background-image: url('../img/fotohome.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
-  color: #040404;
+  color: rgb(4, 4, 4);
   text-align: center;
   padding: 20px;
-  font: xx-large monospace;
+  font-family: monospace;
+  font-style: inherit;
   position: relative;
+  /* Añade esta línea para asegurarte de que el dropdown esté posicionado correctamente */
+  font-size: xx-large;
 }
 
+/* Elimina il blocco di stili per il quadrato giallo */
 .dropdown::before {
   content: '';
   position: absolute;
@@ -16,15 +23,17 @@
   transform: translate(-50%, -50%);
   width: 50px;
   height: 50px;
-  background: url('../img/LOGO.png');
+  background-image: url('../img/LOGO.png');
 }
 
 .dropdown:hover::before {
-  background: url('../img/LOGO.png');
+  /* Aggiungi il logo come background-image solo quando l'elemento è in stato di hover */
+  background-image: url('../img/LOGO.png');
 }
 
+/* Estilos para la imagen */
 .contenedor img {
-  background: url('../img/LOGO.png') center/cover;
+  background-image: url('../img/LOGO.png');
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,6 +42,7 @@
   max-height: 100%;
 }
 
+/* Estilos para el dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -62,6 +72,8 @@
   margin: 0;
 }
 
+// Developed by http://grohit.com/
+
 body {
   display: flex;
   flex-direction: column;
@@ -69,7 +81,7 @@ body {
   align-items: center;
   position: relative;
   min-height: 100vh;
-  font: Hack, monospace;
+  font-family: Hack, monospace;
 }
 
 div {
@@ -85,28 +97,34 @@ p {
   font-weight: 600;
   transition: all 1s ease-in-out;
   position: relative;
-}
 
-p::before {
-  content: attr(data-item);
-  transition: all 1s ease-in-out;
-  color: #8254ff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
+  &::before {
+    content: attr(data-item);
+    transition: all 1s ease-in-out;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
 
-p:hover::before {
-  width: 100%;
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
 }
 
 nav {
-  background: url('../img/fotohome.jpeg') no-repeat center/cover;
+  background-image: url('../img/fotohome.jpeg');
+  /* Aggiungi lo sfondo alla barra di navigazione */
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 16px;
+  /* Regola la spaziatura interna */
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -117,6 +135,7 @@ nav {
   display: flex;
   margin: 0;
   padding: 0;
+  /* Rimuovi il padding dal menuItems */
 }
 
 .menuItems li {
@@ -133,23 +152,23 @@ nav {
   position: relative;
   text-transform: uppercase;
   margin-right: -2px;
-}
 
-.menuItems li a::before {
-  content: attr(data-item);
-  transition: 0.5s;
-  color: #8254ff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
 
-.menuItems li a:hover {
-  font-weight: bold;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 .sub-menu {
@@ -158,42 +177,50 @@ nav {
   z-index: 1;
 }
 
-.sub-menu, .sub-menu li {
+.sub-menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  /* Rimuovi la numerazione dal sottomenu */
+  padding: 1;
+  /* Rimuovi il padding */
+}
+
+.sub-menu li {
+  margin: 1;
+  /* Rimuovi il margine tra le voci del sottomenu */
 }
 
 .sub-menu a {
   text-decoration: none;
   color: #faf7f7;
   font-size: 10px;
+  /* Riduci la dimensione del testo del sottomenu se necessario */
   font-weight: 200;
   font-family: monospace;
   transition: all 0.5s ease-in-out;
   text-transform: uppercase;
-}
 
-.sub-menu a::before {
-  content: attr(data-item);
-  transition: 0.5s;
-  color: #8254ff;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
+  &::before {
+    content: attr(data-item);
+    transition: 0.5s;
+    color: #8254ff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    overflow: hidden;
+  }
 
-.sub-menu a:hover {
-  font-weight: bold;
+  &:hover {
+    font-weight: bold;
+  }
 }
 
 .menuItems li:hover .sub-menu {
   display: block;
 }
+
 
 footer {
   background-color: #333;
@@ -203,45 +230,59 @@ footer {
   padding: 10px;
   position: fixed;
   width: 100%;
+  /* Cambiado a 100% para ocupar todo el ancho de la página */
   height: 10px;
+  /* Puedes ajustar la altura según tus preferencias */
   bottom: 0;
   z-index: 2;
 }
 
+
 @media only screen and (max-width: 600px) and (max-device-width: 600px) {
   .contenedor {
     background-size: cover;
+    /* o ajusta según sea necesario */
   }
 }
 
 @media only screen and (max-width: 360px) and (max-device-width: 740px) {
   nav {
     padding: 10px;
+    /* Ajusta el relleno según sea necesario */
     height: auto;
+    /* Permite que la altura se ajuste automáticamente */
     justify-content: space-around;
+    /* Ajusta la distribución de los elementos */
   }
 
   .menuItems {
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row align-items: center;
+    /* Centra los elementos del menú verticalmente */
   }
 
   .menuItems li {
     margin-right: 10px;
+    /* Elimina el margen derecho en dispositivos pequeños */
     margin-bottom: 10px;
-    margin-left: 10px;
+    /* Añade un margen inferior entre los elementos del menú */
+    margin-left: 10PX;
+
   }
 
   .menuItems li a {
     padding: 10px;
+    /* Ajusta el relleno dentro de cada enlace según sea necesario */
     font-size: 13px;
   }
 
   @media only screen and (max-width: 280px) and (max-device-width: 653px) {
     nav {
       padding: 10px;
+      /* Ajusta el relleno según sea necesario */
       height: auto;
+      /* Permite que la altura se ajuste automáticamente */
       justify-content: space-around;
+      /* Ajusta la distribución de los elementos */
     }
 
     h1 {
@@ -254,18 +295,24 @@ footer {
 
     .menuItems {
       flex-direction: row;
+      /* Agrega la coma que falta aquí */
       align-items: center;
+      /* Centra los elementos del menú verticalmente */
     }
 
     .menuItems li {
       margin-right: 10px;
+      /* Ajusta el margen derecho en dispositivos pequeños con la unidad adecuada */
       margin-bottom: 10px;
+      /* Añade un margen inferior entre los elementos del menú */
       margin-left: 3px;
     }
 
     .menuItems li a {
       padding: 10px;
+      /* Ajusta el relleno dentro de cada enlace según sea necesario */
       font-size: 10px;
+      /* Reduce el tamaño de la fuente */
     }
+
   }
-}

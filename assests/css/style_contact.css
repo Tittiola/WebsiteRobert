@@ -3,12 +3,17 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  background-image: url(../img/SEA/imag8.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin: 0;
   padding: 0;
-  background: url(../img/SEA/imag8.JPG) no-repeat center / cover;
 }
 
 nav {
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 16px;
   display: flex;
   justify-content: flex-start;
@@ -60,18 +65,25 @@ nav {
   display: none;
   position: absolute;
   z-index: 1;
+}
+
+.sub-menu {
   list-style: none;
+  /* Rimuovi la numerazione dal sottomenu */
   padding: 0;
+  /* Rimuovi il padding */
 }
 
 .sub-menu li {
   margin: 0;
+  /* Rimuovi il margine tra le voci del sottomenu */
 }
 
 .sub-menu a {
   text-decoration: none;
   color: #060606;
   font-size: 16px;
+  /* Riduci la dimensione del testo del sottomenu se necessario */
   font-weight: 400;
   font-family: monospace;
   transition: all 0.5s ease-in-out;
@@ -107,7 +119,9 @@ footer {
   padding: 10px;
   position: fixed;
   width: 100%;
+  /* Cambiado a 100% para ocupar todo el ancho de la página */
   height: 10px;
+  /* Puedes ajustar la altura según tus preferencias */
   bottom: 0;
   z-index: 2;
 }
@@ -119,12 +133,15 @@ form {
   text-align: center;
   width: 50%;
   max-width: 900px;
-  height: auto;
+  height: 700px;
+  /* Cambiado a auto para que se ajuste al contenido */
   margin: 20px auto 90px;
   align-items: center;
   box-sizing: border-box;
+  /* Incluye padding y borde en el ancho y alto */
 }
 
+/* Asegura que el contenido dentro del formulario sea responsive */
 form * {
   box-sizing: border-box;
 }
@@ -135,16 +152,30 @@ form * {
   text-align: left;
 }
 
-h2, label {
+h2 {
   color: #283629;
   font-size: 30px;
+  /* Adjusted the font size */
   text-align: left;
 }
 
-input, textarea {
-  padding: 15px 25px;
-  border-radius: 20px;
+label {
+  color: #f4f3f7;
+  font-size: 16px;
+  /* Adjusted the font size */
+  font-weight: 1000;
   margin-bottom: 10px;
+  /* Adjusted the margin-bottom */
+}
+
+input,
+textarea {
+  padding: 15px 25px;
+  /* Adjusted the padding */
+  border-radius: 20px;
+  /* Slightly reduced the border-radius */
+  margin-bottom: 10px;
+  /* Adjusted the margin-bottom */
   background-color: #e1ede3;
   border: 2px solid #b3adb2;
   color: #283629;
@@ -153,14 +184,17 @@ input, textarea {
 
 .input-group textarea {
   min-height: 50px;
+  /* Set a minimum height for textarea */
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #3b3f4b;
 }
 
 .form-txt {
   margin-bottom: 20px;
+  /* Adjusted the margin-bottom */
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -175,6 +209,7 @@ input::placeholder, textarea::placeholder {
 
 .btn {
   font-size: 16px;
+  /* Adjusted the font size */
   border-radius: 20px;
   background-color: #868583;
   box-shadow: 0 0 20px rgba(100, 101, 100, 0.4);
@@ -189,9 +224,21 @@ input::placeholder, textarea::placeholder {
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
+
 @media only screen and (max-width: 376px) {
-  nav, .menuItems, .menuItems li {
+  nav {
     margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
   }
 
   .menuItems li a {
@@ -200,10 +247,105 @@ input::placeholder, textarea::placeholder {
   }
 
   body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../img/SEA/imag8.JPG) no-repeat center / contain;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/SEA/imag8.JPG);
+
+
+    background-position: center;
+  }
+
+
+
+  form {
+    width: 90%;
+    max-width: 400px;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+  }
+
+  h2 {
+    color: #283629;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  label {
+    color: #f4f3f7;
+    font-size: 16px;
+    font-weight: 1000;
+    margin-bottom: 10px;
+  }
+
+  input,
+  textarea {
+    padding: 15px 25px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background-color: #e1ede3;
+    border: 2px solid #b3adb2;
+    color: #283629;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .input-group textarea {
+    min-height: 100px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #3b3f4b;
+  }
+
+  .form-txt {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .form-txt a {
+    color: #76b28e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/SEA/imag8.JPG);
+
+
+    background-position: center;
   }
 
   form {
@@ -216,54 +358,52 @@ input::placeholder, textarea::placeholder {
     box-sizing: border-box;
   }
 
-  input, textarea {
-    padding: 10px;
-    width: 100%;
-  }
 
-  .input-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    width: 100%;
-  }
-
-  h2, label {
-    font-size: 30px;
-  }
-
-  .input-group textarea {
-    min-height: 100px;
-  }
-
-  input::placeholder, textarea::placeholder {
-    color: #3b3f4b;
-  }
-
-  .form-txt {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  .form-txt a {
-    font-size: 14px;
-  }
 }
 
 @media only screen and (max-width: 440px) {
-  body, form {
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../img/SEA/imag8.JPG) no-repeat center / contain;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/SEA/imag8.JPG);
+
+
+    background-position: center;
   }
+
+  form {
+    width: 90%;
+    max-width: 400px;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+
 }
 
 @media only screen and (max-width: 290px) {
-  nav, .menuItems, .menuItems li {
-    margin: 3% 0;
+
+  nav {
+    margin: 5% 0;
+  }
+
+  .menuItems {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menuItems li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 3px;
   }
 
   .menuItems li a {
@@ -271,11 +411,27 @@ input::placeholder, textarea::placeholder {
     padding: 0.5em;
   }
 
-  body, form {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../img/SEA/imag8.JPG) no-repeat center / contain;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/SEA/imag8.JPG);
+
+
+    background-position: center;
+  }
+
+  form {
+    width: 90%;
+    max-width: 400px;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
   }
 
   form * {
@@ -289,58 +445,105 @@ input::placeholder, textarea::placeholder {
   }
 
   h2 {
+    color: #283629;
     font-size: 30px;
+    /* Adjusted the font size */
+    text-align: left;
   }
 
   label {
+    color: #f4f3f7;
     font-size: 16px;
+    /* Adjusted the font size */
+    font-weight: 1000;
     margin-bottom: 10px;
+    /* Adjusted the margin-bottom */
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 15px 25px;
+    /* Adjusted the padding */
     border-radius: 20px;
+    /* Slightly reduced the border-radius */
     margin-bottom: 10px;
+    /* Adjusted the margin-bottom */
+    background-color: #e1ede3;
+    border: 2px solid #b3adb2;
+    color: #283629;
+    outline: none;
   }
 
   .input-group textarea {
     min-height: 50px;
+    /* Set a minimum height for textarea */
   }
 
-  input::placeholder, textarea::placeholder {
+  input::placeholder,
+  textarea::placeholder {
     color: #3b3f4b;
   }
 
   .form-txt {
     margin-bottom: 20px;
+    /* Adjusted the margin-bottom */
     display: flex;
     justify-content: space-between;
     text-align: center;
   }
 
   .form-txt a {
+    color: #76b28e;
     font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
   }
 
   .btn {
     font-size: 16px;
+    /* Adjusted the font size */
+    border-radius: 20px;
+    background-color: #868583;
+    box-shadow: 0 0 20px rgba(100, 101, 100, 0.4);
+    cursor: pointer;
   }
+
+  .btn:hover {
+    background-color: #7c5a9c;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(100, 101, 100, 0.6);
+    transform: scale(1.03);
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  }
+
+
 }
 
 @media only screen and (max-width: 1024px) {
+  /* Estilos específicos para iPads u otras pantallas de tamaño similar */
+
   nav {
     margin: 1% 0;
   }
 
-  body, form {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(../img/SEA/imag8.JPG) no-repeat center / contain;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/SEA/imag8.JPG);
+
+
+    background-position: center;
   }
 
   form {
     width: 70%;
+    /* Puedes ajustar según sea necesario para la mejor apariencia en iPad */
     max-width: 600px;
   }
+
+  /* Agrega otras reglas según sea necesario para otros elementos específicos */
 }
