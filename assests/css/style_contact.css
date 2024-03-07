@@ -11,6 +11,8 @@ body {
   padding: 0;
 }
 
+
+
 nav {
   background-size: cover;
   background-repeat: no-repeat;
@@ -331,9 +333,16 @@ textarea::placeholder {
     font-weight: 600;
     text-decoration: none;
   }
+
+  .vero-icon {
+    position: fixed;
+      bottom: 300px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+      left: 15px; /* Ajusta la distancia desde la parte izquierda según tus preferencias */
+      z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
+  }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 435px) {
 
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -356,6 +365,13 @@ textarea::placeholder {
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+  }
+
+  .vero-icon {
+    position: fixed;
+      bottom: 620px; /* Ajusta la distancia desde la parte inferior según tus preferencias */
+      left: 5px; /* Ajusta la distancia desde la parte izquierda según tus preferencias */
+      z-index: 1000; /* Asegura que el icono esté por encima de otros elementos */
   }
 
 

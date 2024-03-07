@@ -222,6 +222,8 @@ nav {
 }
 
 
+
+
 footer {
   background-color: #333;
   color: white;
@@ -238,11 +240,15 @@ footer {
 }
 
 
+
+
+
 @media only screen and (max-width: 600px) and (max-device-width: 600px) {
   .contenedor {
     background-size: cover;
     /* o ajusta según sea necesario */
   }
+
 }
 
 @media only screen and (max-width: 360px) and (max-device-width: 740px) {
@@ -255,8 +261,12 @@ footer {
     /* Ajusta la distribución de los elementos */
   }
 
+
+
+
   .menuItems {
-    flex-direction: row align-items: center;
+    flex-direction: row;
+    align-items: center;
     /* Centra los elementos del menú verticalmente */
   }
 
@@ -265,8 +275,7 @@ footer {
     /* Elimina el margen derecho en dispositivos pequeños */
     margin-bottom: 10px;
     /* Añade un margen inferior entre los elementos del menú */
-    margin-left: 10PX;
-
+    margin-left: 10px; /* Corrige la escritura de 10PX a 10px */
   }
 
   .menuItems li a {
@@ -274,6 +283,7 @@ footer {
     /* Ajusta el relleno dentro de cada enlace según sea necesario */
     font-size: 13px;
   }
+
 
   @media only screen and (max-width: 280px) and (max-device-width: 653px) {
     nav {
@@ -285,6 +295,7 @@ footer {
       /* Ajusta la distribución de los elementos */
     }
 
+   
     h1 {
       font-size: 40px;
     }
@@ -314,5 +325,5 @@ footer {
       font-size: 10px;
       /* Reduce el tamaño de la fuente */
     }
-
   }
+}
